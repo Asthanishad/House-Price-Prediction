@@ -1,0 +1,27 @@
+body {
+    background-color: #051c49;
+    color: rgb(24, 143, 167);
+}
+
+.main {
+    background-color: #03173e;
+}
+
+.stButton>button {
+    width: 100%;
+    background-color: #ff4b4b;
+    color: white;
+    border-radius: 10px;
+    height: 3em;
+    font-size: 18px;
+    border: none;
+}
+
+.stButton>button:hover {
+    background-color: #ff1e1e;
+    color: white;
+}
+
+.css-1d391kg {
+    background-color: #1c1c1c;
+}
