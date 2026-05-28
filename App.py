@@ -2,24 +2,20 @@ import streamlit as st
 import pickle
 import numpy as np
 
-# Load CSS
 def load_css():
     with open("style.css") as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 load_css()
 
-# Load model
 model = pickle.load(open('model.pkl', 'rb'))
 
-# Page config
 st.set_page_config(
     page_title="House Price Predictor",
     page_icon="🏠",
     layout="centered"
 )
 
-# Custom HTML Title
 st.markdown("""
 <h1 style='text-align: center; color: white;'>
 🏠 Bengaluru House Price Prediction
@@ -28,7 +24,6 @@ st.markdown("""
 
 st.markdown("---")
 
-# Input Section
 st.markdown("## Enter House Details")
 
 col1, col2 = st.columns(2)
@@ -41,7 +36,6 @@ with col2:
 
 bhk = st.slider("BHK", 1, 10)
 
-# Predict Button
 if st.button("Predict Price"):
 
     features = np.array([[sqft, bath, bhk]])
